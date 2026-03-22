@@ -1,3 +1,18 @@
-:root { 
-    -
+:root {
+  /* Spacing */
+  --px: 10px;
+
+  /* Colors */
+  --color-main: #0B3C5D; 
+  --color-accent: #b5873a;
+  --color-accent-light: #c9a05c;
+  --color-text: #1a1a18;
+  --color-text-muted: #6b6b60;
+  --color-text-light: #faf7f2;
+  --color-bg: #faf7f2;
+  --color-surface: #ffffff;
+  --color-border: #e8e3d8;
+
+  /* Sizing */
+  --navbar-height: 68px;
 }

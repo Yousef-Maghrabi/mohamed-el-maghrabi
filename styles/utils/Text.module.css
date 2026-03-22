@@ -1,0 +1,14 @@
+.mainHeading { 
+    font-size: var(--text-heading1);
+    color: var(--color-main); 
+} 
+
+.mainHeading span { 
+    color: var(--color-accent); 
+    text-decoration: underline; 
+} 
+
+.mainHeadingParagraph { 
+    weight: 200; 
+    font-size: var(--text-normal)
+}

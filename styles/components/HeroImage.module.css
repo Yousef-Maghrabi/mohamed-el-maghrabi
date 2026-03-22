@@ -1,0 +1,61 @@
+.hero-image-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Decorative offset frame */
+.hero-image-frame {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+/* The accent box sits behind and offset */
+.hero-image-accent {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #c8a96e 0%, #8b6830 100%);
+  transform: translate(6px, 6px);
+  z-index: 0;
+}
+
+/* Portrait image */
+.hero-image {
+  position: relative;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Caption strip */
+.hero-image-caption {
+  background: #1a1208;
+  border-radius: 999px;
+  padding: 6px 18px;
+}
+
+.hero-image-name {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #e8d5a3;
+  white-space: nowrap;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-image-caption {
+    background: #2a1e0a;
+  }
+
+  .hero-image-name {
+    color: #f0ddb0;
+  }
+}
