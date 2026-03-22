@@ -15,4 +15,10 @@
 
 .heroCTA:hover {
   background-color: var(--color-accent-light);
+} 
+
+@media (min-width: 1200px) {
+  .heroCTA {
+    width: fit-content;
+  }
 }

@@ -1,0 +1,177 @@
+/* ============================================================
+   content.css — Flex layout utility classes
+   Part of: styles/layout/
+   ============================================================ */
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+/* ----------------------------------------------------------
+   Direction
+   ---------------------------------------------------------- */
+
+.content-row         { flex-direction: row; }
+.content-row-rev     { flex-direction: row-reverse; }
+.content-col         { flex-direction: column; }
+.content-col-rev     { flex-direction: column-reverse; }
+
+/* ----------------------------------------------------------
+   Wrapping
+   ---------------------------------------------------------- */
+
+.content-wrap        { flex-wrap: wrap; }
+.content-wrap-rev    { flex-wrap: wrap-reverse; }
+.content-nowrap      { flex-wrap: nowrap; }
+
+/* ----------------------------------------------------------
+   Main-axis alignment (justify-content)
+   ---------------------------------------------------------- */
+
+.content-main-start    { justify-content: flex-start; }
+.content-main-end      { justify-content: flex-end; }
+.content-main-center   { justify-content: center; }
+.content-main-between  { justify-content: space-between; }
+.content-main-around   { justify-content: space-around; }
+.content-main-evenly   { justify-content: space-evenly; }
+
+/* ----------------------------------------------------------
+   Cross-axis alignment (align-items)
+   ---------------------------------------------------------- */
+
+.content-cross-start    { align-items: flex-start; }
+.content-cross-end      { align-items: flex-end; }
+.content-cross-center   { align-items: center; }
+.content-cross-stretch  { align-items: stretch; }
+.content-cross-baseline { align-items: baseline; }
+
+/* ----------------------------------------------------------
+   Multi-line cross-axis alignment (align-content)
+   Only meaningful when flex-wrap is active.
+   ---------------------------------------------------------- */
+
+.content-lines-start    { align-content: flex-start; }
+.content-lines-end      { align-content: flex-end; }
+.content-lines-center   { align-content: center; }
+.content-lines-between  { align-content: space-between; }
+.content-lines-around   { align-content: space-around; }
+.content-lines-evenly   { align-content: space-evenly; }
+.content-lines-stretch  { align-content: stretch; }
+
+/* ----------------------------------------------------------
+   Common shorthand combos
+   ---------------------------------------------------------- */
+
+/* Row, children centred on both axes */
+.content-center {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Column, children centred on both axes */
+.content-center-col {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Row, children spaced out, vertically centred — classic nav/toolbar */
+.content-spread {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Column, children stacked from the top */
+.content-stack {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* Row, children pushed to opposite ends */
+.content-bookend {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* ----------------------------------------------------------
+   Gap utilities
+   ---------------------------------------------------------- */
+
+.content-gap-none { gap: 0; }
+.content-gap-xs   { gap: 0.25rem; }
+.content-gap-sm   { gap: 0.5rem; }
+.content-gap-md   { gap: 1rem; }
+.content-gap-lg   { gap: 2rem; }
+.content-gap-xl   { gap: 4rem; }
+
+/* Column-gap / Row-gap independently */
+.content-col-gap-xs  { column-gap: 0.25rem; }
+.content-col-gap-sm  { column-gap: 0.5rem; }
+.content-col-gap-md  { column-gap: 1rem; }
+.content-col-gap-lg  { column-gap: 2rem; }
+.content-col-gap-xl  { column-gap: 4rem; }
+
+.content-row-gap-xs  { row-gap: 0.25rem; }
+.content-row-gap-sm  { row-gap: 0.5rem; }
+.content-row-gap-md  { row-gap: 1rem; }
+.content-row-gap-lg  { row-gap: 2rem; }
+.content-row-gap-xl  { row-gap: 4rem; }
+
+/* ----------------------------------------------------------
+   Overflow variants
+   ---------------------------------------------------------- */
+
+.content-scroll   { overflow: auto; }
+.content-scroll-y { overflow-x: hidden; overflow-y: auto; }
+.content-scroll-x { overflow-y: hidden; overflow-x: auto; }
+.content-visible  { overflow: visible; }
+
+/* ----------------------------------------------------------
+   Sizing variants
+   ---------------------------------------------------------- */
+
+/* Shrink to fit children instead of filling the parent */
+.content-fit  { width: fit-content; height: fit-content; }
+.content-fitw { width: fit-content; }
+.content-fith { height: fit-content; }
+
+/* Fill remaining space inside a flex/grid parent */
+.content-grow { flex: 1 1 0%; }
+
+/* ----------------------------------------------------------
+   Position variants
+   ---------------------------------------------------------- */
+
+.content-static   { position: static; }
+.content-absolute { position: absolute; inset: 0; }
+.content-sticky   { position: sticky; top: 0; }
+.content-fixed    { position: fixed; inset: 0; }
+
+/* ----------------------------------------------------------
+   Child (item) utilities — apply to direct children
+   ---------------------------------------------------------- */
+
+/* Self-alignment overrides */
+.item-self-start    { align-self: flex-start; }
+.item-self-end      { align-self: flex-end; }
+.item-self-center   { align-self: center; }
+.item-self-stretch  { align-self: stretch; }
+.item-self-baseline { align-self: baseline; }
+
+/* Flex-grow / shrink / basis shorthands */
+.item-grow      { flex: 1 1 0%; }
+.item-shrink    { flex: 0 1 auto; }
+.item-none      { flex: none; }
+.item-auto      { flex: 1 1 auto; }
+
+/* Order helpers */
+.item-first     { order: -1; }
+.item-last      { order: 9999; }

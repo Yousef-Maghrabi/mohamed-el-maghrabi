@@ -1,0 +1,16 @@
+.footer { 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: var(--color-bg);
+    padding: 30px 15px;
+} 
+
+.footerBrand { 
+    color: var(--color-main);  
+    font-size: var(--text-normal);
+} 
+
+.footerCopyright { 
+    color: var(--color-grey); 
+} 

@@ -1,0 +1,161 @@
+/* --- About Section --- */ 
+.about {  
+  margin-top: 40px;
+  padding: 30px;
+  height: 100dvh; 
+  width: 100%;
+  position: relative;  
+  overflow: hidden;
+}
+
+/* ─── Intro Section ─── */
+
+.about-intro {
+  position: relative;
+  padding: 10px;
+  overflow: hidden; 
+  grid-row: span 3; 
+  height: 100%;
+  width: 100%;
+}
+
+.about-intro-img {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  filter: brightness(0.55);
+}
+
+.about-intro-heading {
+  position: relative;
+  z-index: 1;
+  color: var(--color-bg);
+  font-size: var(--text-heading2);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.about-intro-heading span {
+  color: var(--color-accent-light);  
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px; 
+  font-size: var(--text-heading1);
+}
+
+.about-intro-divider {
+  position: relative;
+  z-index: 1;
+  height: 5px;
+  width: 150px;
+  background-color: var(--color-accent); 
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.about-intro-paragraph {
+  position: relative;
+  z-index: 1;
+  color: var(--color-bg);
+  letter-spacing: 0.25em;  
+  font-size: var(--text-normal);
+  text-transform: uppercase; 
+  text-shadow: 0 0 6px var(--color-bg); 
+} 
+
+/* --- Paragraph Section --- */ 
+
+.about-paragraph { 
+  padding: 30px; 
+  grid-column: span 2;
+}
+
+/* --- Global Vision Section --- */ 
+
+.about-globalvision {
+  width: calc(100% - 45px);
+  height: 100%;
+  background-color: var(--color-grey);
+  border-radius: 20px;
+  padding: 15px; 
+  grid-row: span 2; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+.about-globalvision-paragraph {
+  color: var(--color-text);
+  font-size: var(--text-small);
+}
+
+.about-globalvision-badge {
+  display: flex;
+  flex-direction: row;
+  gap: 15px; 
+  align-items: center;
+}
+
+.about-globalvision-badge-icon-cont {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: var(--color-main-bg);
+}
+
+.about-globalvision-badge-label {
+  color: var(--color-text); 
+  font-size: var(--text-normal); 
+}
+
+/* --- Soft Skills Mastery Section --- */
+.about-softskillsmastery {
+  width: calc(100% - 45px);
+  height: 100%;
+  background-color: var(--color-accent-bg);
+  border-radius: 20px;
+  padding: 15px;
+  grid-row: span 2;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;  
+}
+
+.about-softskillsmastery h3 { 
+  font-size: var(--textheading3);  
+  padding-bottom: 10px;
+} 
+
+.about-softskillsmastery ul { 
+  list-style-type: disc; 
+  padding-left: 20px;
+}
+
+.about-softskillsmastery-badge {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+.about-softskillsmastery-badge-icon-cont {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: var(--color-main-bg);
+}
+
+.about-softskillsmastery-badge-label {
+  color: var(--color-text);
+}
+
+@media (max-width: 1200px) {  
+  .about { 
+    height: 100%;
+  }
+  .about-intro {
+    aspect-ratio: 1/1;
+  } 
+
+  .about-globalvision { 
+    margin-bottom: 20px;
+  }
+}

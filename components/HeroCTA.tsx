@@ -1,5 +1,6 @@
 import styles from "@/styles/components/HeroCTA.module.css"  
 import { Poppins } from "next/font/google" 
+import Link from "next/link"
 
 const normal_font = Poppins({
     weight: "400", 
@@ -7,5 +8,5 @@ const normal_font = Poppins({
 }) 
 
 export default function HeroCTA () { 
-    return <button className={`${styles.heroCTA} ${normal_font.className}`}>Book Your Tour</button> 
+    return <Link href={"https://wa.me/+201007451617"} className={`${styles.heroCTA} ${normal_font.className}`}>Start Planning</Link> 
 }

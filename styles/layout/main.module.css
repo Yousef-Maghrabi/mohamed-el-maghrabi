@@ -1,0 +1,31 @@
+@media (max-width: 1200px) { 
+
+    .smHidden { 
+        display: none;
+    }
+
+    .heroSm { 
+        display: flex;  
+        flex-direction: column;
+        position: relative;
+        overflow: hidden; 
+    }    
+
+    .mainHeadingSm { 
+        color: var(--color-main-light); 
+    }  
+
+    .mainHeadingSm span { 
+        color: var(--color-accent-light);
+    }
+
+    .mainHeadingParagraphSm { 
+        color: var(--color-text-light); 
+        text-shadow: 0 0 5px var(--color-text);
+    } 
+
+    .aboutSm { 
+        display: flex; 
+        flex-direction: column;  
+    }
+}

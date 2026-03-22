@@ -1,61 +1,81 @@
-.hero-image-wrapper {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-}
-
-/* Decorative offset frame */
+.hero-image-wrapper {overflow: visible; padding-top: 20px;}
 .hero-image-frame {
   position: relative;
-  width: 150px;
-  height: 150px;
+  height: 80dvh;
+  aspect-ratio: 6/7;
 }
 
-/* The accent box sits behind and offset */
-.hero-image-accent {
+.hero-image-caption-cont { 
   position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #c8a96e 0%, #8b6830 100%);
-  transform: translate(6px, 6px);
-  z-index: 0;
+  height: 80dvh;
+  aspect-ratio: 6/7; 
+  z-index: 2;
+} 
+
+.hero-image-caption { 
+  justify-content: flex-start; 
+  align-items: flex-end; 
+  overflow: visible;
 }
 
 /* Portrait image */
 .hero-image {
   position: relative;
   z-index: 1;
-  width: 150px;
-  height: 150px;
   object-fit: cover;
   border-radius: 16px;
   display: block;
+  aspect-ratio: 6/7;
+  height: 80dvh;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
 }
 
-/* Caption strip */
-.hero-image-caption {
-  background: #1a1208;
-  border-radius: 999px;
-  padding: 6px 18px;
+.hero-image-name { 
+  position: relative;  
+  background: none;
+  top: 15px; 
+  right: 15px; 
 }
 
-.hero-image-name {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 0.82rem;
-  font-weight: 400;
+.hero-image-name p { 
+  border-left: 5px solid var(--color-accent); 
+  display: block; 
+  height: fit-content; 
+  width: fit-content;
+  padding: 15px 30px;
+  font-size: var(--text-normal);
   letter-spacing: 0.08em;
-  color: #e8d5a3;
-  white-space: nowrap;
-}
+  background-color: var(--color-bg);
+  color: var(--color-main);
+  white-space: nowrap;  
+  box-shadow: 0 0 5px var(--color-text); 
+} 
 
-@media (prefers-color-scheme: dark) {
-  .hero-image-caption {
-    background: #2a1e0a;
-  }
+@media (max-width: 1200px) {  
+  .smUseless {
+    width: auto;
+    height: auto;
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    overflow: visible;   
+    display: block;
+    padding: 0;
+    aspect-ratio: auto;  
+  } 
 
-  .hero-image-name {
-    color: #f0ddb0;
+  .smHidden { display: none; }
+
+  
+  .hero-image {
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    display: block;
+    width: 100%; 
+    height: 100%;
+    border: none;
+    border-radius: 0px;
+    filter: brightness(50%); 
   }
 }

@@ -3,9 +3,13 @@
   --px: 10px;
 
   /* Colors */
-  --color-main: #0B3C5D; 
+  --color-main: #0B3C5D;  
+  --color-main-light: #7FA9C4;  
+  --color-main-bg: #7ba9c7; 
+  --color-grey: #ccccc4;
   --color-accent: #b5873a;
-  --color-accent-light: #c9a05c;
+  --color-accent-light: #c9a05c; 
+  --color-accent-bg: #cfb68c;  
   --color-text: #1a1a18;
   --color-text-muted: #6b6b60;
   --color-text-light: #faf7f2;

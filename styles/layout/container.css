@@ -1,0 +1,107 @@
+/* ============================================================
+   container.css — Layout grid utility classes
+   Part of: styles/layout/
+   ============================================================ */
+
+.cont {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+}
+
+/* ----------------------------------------------------------
+   Horizontal divisions — grid-template-rows
+   .cont-h-{1..9}
+   ---------------------------------------------------------- */
+
+.cont-h-1 { grid-template-rows: repeat(1, 1fr); }
+.cont-h-2 { grid-template-rows: repeat(2, 1fr); }
+.cont-h-3 { grid-template-rows: repeat(3, 1fr); }
+.cont-h-4 { grid-template-rows: repeat(4, 1fr); }
+.cont-h-5 { grid-template-rows: repeat(5, 1fr); }
+.cont-h-6 { grid-template-rows: repeat(6, 1fr); }
+.cont-h-7 { grid-template-rows: repeat(7, 1fr); }
+.cont-h-8 { grid-template-rows: repeat(8, 1fr); }
+.cont-h-9 { grid-template-rows: repeat(9, 1fr); }
+
+/* ----------------------------------------------------------
+   Vertical divisions — grid-template-columns
+   .cont-v-{1..9}
+   ---------------------------------------------------------- */
+
+.cont-v-1 { grid-template-columns: repeat(1, 1fr); }
+.cont-v-2 { grid-template-columns: repeat(2, 1fr); }
+.cont-v-3 { grid-template-columns: repeat(3, 1fr); }
+.cont-v-4 { grid-template-columns: repeat(4, 1fr); }
+.cont-v-5 { grid-template-columns: repeat(5, 1fr); }
+.cont-v-6 { grid-template-columns: repeat(6, 1fr); }
+.cont-v-7 { grid-template-columns: repeat(7, 1fr); }
+.cont-v-8 { grid-template-columns: repeat(8, 1fr); }
+.cont-v-9 { grid-template-columns: repeat(9, 1fr); }
+
+/* ----------------------------------------------------------
+   Gap utilities — uniform gap between cells
+   .cont-gap-{none|xs|sm|md|lg|xl}
+   ---------------------------------------------------------- */
+
+.cont-gap-none { gap: 0; }
+.cont-gap-xs   { gap: 0.25rem; }
+.cont-gap-sm   { gap: 0.5rem; }
+.cont-gap-md   { gap: 1rem; }
+.cont-gap-lg   { gap: 2rem; }
+.cont-gap-xl   { gap: 4rem; }
+
+/* ----------------------------------------------------------
+   Alignment utilities
+   ---------------------------------------------------------- */
+
+/* Align all children along the row axis */
+.cont-align-start   { align-items: start; }
+.cont-align-center  { align-items: center; }
+.cont-align-end     { align-items: end; }
+.cont-align-stretch { align-items: stretch; }
+
+/* Justify all children along the column axis */
+.cont-justify-start   { justify-items: start; }
+.cont-justify-center  { justify-items: center; }
+.cont-justify-end     { justify-items: end; }
+.cont-justify-stretch { justify-items: stretch; }
+
+/* Content distribution (when the grid is larger than its tracks) */
+.cont-content-start          { align-content: start; }
+.cont-content-center         { align-content: center; }
+.cont-content-end            { align-content: end; }
+.cont-content-space-between  { align-content: space-between; }
+.cont-content-space-around   { align-content: space-around; }
+.cont-content-space-evenly   { align-content: space-evenly; }
+
+/* ----------------------------------------------------------
+   Overflow variants
+   ---------------------------------------------------------- */
+
+.cont-scroll   { overflow: auto; }
+.cont-scroll-y { overflow-x: hidden; overflow-y: auto; }
+.cont-scroll-x { overflow-y: hidden; overflow-x: auto; }
+.cont-visible  { overflow: visible; }
+
+/* ----------------------------------------------------------
+   Position variants
+   ---------------------------------------------------------- */
+
+.cont-static   { position: static; }
+.cont-sticky   { position: sticky; top: 0; }
+.cont-fixed    { position: fixed; inset: 0; }
+.cont-absolute { position: absolute; inset: 0; }
+
+/* ----------------------------------------------------------
+   Max-width centred wrapper (common page shell)
+   ---------------------------------------------------------- */
+
+.cont-page {
+  width: 100%;
+  max-width: var(--page-max-width, 1280px);
+  margin-inline: auto;
+  padding-inline: var(--page-gutter, 1.5rem);
+}

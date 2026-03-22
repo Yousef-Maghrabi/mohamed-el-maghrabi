@@ -10,11 +10,15 @@
   letter-spacing: 0.12em;
   border-radius: 999px;
   border: 1px solid #aecfe8;
-  user-select: none;
+  user-select: none; 
 }
 
 .icon {
   color: #0b3c5d;
   flex-shrink: 0;
   opacity: 0.85;
+} 
+
+@media (min-width: 1200px) {
+  .badge {width: fit-content;}
 }
